@@ -5,12 +5,18 @@ class DashboardController extends BaseController
 	public function index()
 	{
 		helper('auth');
-		$logged_in = logged_in();
+		
+		if (!logged_in())
+			return redirect()->route('login');
+
 		$user = user();
 
+		$config = config('Auth');
+
 		$data = [
-			'logged_in' => $logged_in,
-			'user' => $user
+			'logged_in' => logged_in(),
+			'user' => $user,
+			'config' => $config
 		];
 
 		return view('dashboard', $data);

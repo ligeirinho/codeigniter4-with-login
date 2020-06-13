@@ -1,5 +1,8 @@
-<h1>
-    Dashboard
-    <? print_r($logged_in); ?>
-    <? print_r($user); ?>
-</h1>
+<? echo view('Auth\_navbar'); ?>
+
+<h1>Dashboard</h1>
+<? 
+    if ($logged_in) {
+        echo $user->username;
+    } 
+?>

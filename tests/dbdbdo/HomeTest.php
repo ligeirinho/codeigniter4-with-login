@@ -14,11 +14,6 @@ class HomeTest extends \CodeIgniter\Test\CIDatabaseTestCase
 		parent::setUp();
 	}
 
-	// public function testRenderWelcome() {
-	// 	$body = $this->getBody();
-	// 	$result = $this->assertTrue($this->see("Welcome", $body));
-	// }
-
 	public function testAmIGood()
 	{
 		$test = defined('APPPATH');
