@@ -129,3 +129,4 @@ nb-configuration.xml
 
 /writable
 /node_modules
+/tests
