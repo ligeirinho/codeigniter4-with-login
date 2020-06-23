@@ -1,4 +1,4 @@
-# Codeigniter4 implementation of Myth:Auto, login package
+# Codeigniter4 with Myth:Auto, login package
 https://github.com/lonnieezell/myth-auth
 
 Flexible, Powerful, Secure auth package for CodeIgniter 4.
