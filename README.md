@@ -1,4 +1,8 @@
-# CodeIgniter 4 Application Starter
+# Codeigniter4 implementation of Myth:Auto, login package
+
+[![](https://github.com/lonnieezell/myth-auth/workflows/PHP%20Tests/badge.svg)](https://github.com/lonnieezell/myth-auth/actions?query=workflow%3A%22PHP+Tests%22)
+
+Flexible, Powerful, Secure auth package for CodeIgniter 4.
 
 ## What is CodeIgniter?
 
