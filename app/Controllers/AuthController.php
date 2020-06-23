@@ -10,6 +10,10 @@ class AuthController extends Controller
 	/**
 	 * @var Auth
 	 */
+	protected $user;
+	/**
+	 * @var User
+	 */
 	protected $config;
 
 	/**
@@ -21,10 +25,11 @@ class AuthController extends Controller
 	{
 		// Most services in this controller require
 		// the session to be started - so fire it up!
+		helper('auth');
 		$this->session = service('session');
-
 		$this->config = config('Auth');
 		$this->auth = service('authentication');
+		$this->user = user();
 	}
 
 	//--------------------------------------------------------------------
@@ -51,7 +56,10 @@ class AuthController extends Controller
         // Set a return URL if none is specified
         $_SESSION['redirect_url'] = session('redirect_url') ?? previous_url() ?? '/';
 
-		return view($this->config->views['login'], ['config' => $this->config]);
+		return view($this->config->views['login'], ['session' => $this->session,
+													'auth' => $this->auth->check(),
+													'user' => $this->user,
+													'config' => $this->config]);
 	}
 
 	/**

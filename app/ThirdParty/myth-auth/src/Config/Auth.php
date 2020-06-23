@@ -27,7 +27,7 @@ class Auth extends BaseConfig
     //--------------------------------------------------------------------
 
     public $views = [
-        'login' => 'Myth\Auth\Views\login',
+        'login' => 'Myth\Auth\Views\login1',
         'register' => 'Myth\Auth\Views\register',
         'forgot' => 'Myth\Auth\Views\forgot',
         'reset' => 'Myth\Auth\Views\reset',

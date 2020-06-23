@@ -85,6 +85,7 @@ phpunit
 #-------------------------
 vendor/
 composer.lock
+package-lock.json
 
 #-------------------------
 # IDE / Development Files
@@ -127,3 +128,4 @@ nb-configuration.xml
 /.phpunit.*.cache
 
 /writable
+/node_modules

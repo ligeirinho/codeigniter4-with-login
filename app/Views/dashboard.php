@@ -1,8 +1,14 @@
-<? echo view('Auth\_navbar'); ?>
+<?= $this->extend('Auth\layout'); ?>
 
-<h1>Dashboard</h1>
-<? 
-    if ($logged_in) {
-        echo $user->username;
-    } 
-?>
+<?= $this->section("pageStyles"); ?>
+<style>
+    i { color: white; }
+    .nav-link { color: white !important; }
+    .nav-item { color: white; }
+    .nav-link:hover { color: #ffaf36 !important; text-decoration: underline; }
+</style>
+<?= $this->endSection("pageStyles"); ?>
+
+<?= $this->section('menu'); ?>
+<?= $this->include("menu"); ?>
+<?= $this->endSection('menu'); ?>
