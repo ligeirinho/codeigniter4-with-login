@@ -1,10 +1,9 @@
 <?= $this->extend($config->viewLayout) ?>
-<?= $this->section('main') ?>
+<?= $this->section("forgot"); ?>
 
-<div class="container">
+<div class="w-100 pt-5">
     <div class="row">
-        <div class="col-sm-6 offset-sm-3">
-
+        <div class="col-sm-3 mx-auto">
             <div class="card">
                 <h2 class="card-header"><?=lang('Auth.forgotPassword')?></h2>
                 <div class="card-body">
@@ -29,12 +28,9 @@
 
                         <button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.sendInstructions')?></button>
                     </form>
-
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-
 <?= $this->endSection() ?>

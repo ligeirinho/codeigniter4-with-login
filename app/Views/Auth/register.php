@@ -1,11 +1,9 @@
 <?= $this->extend($config->viewLayout) ?>
-<?= $this->section('main') ?>
+<?= $this->section("register"); ?>
 
-<div class="container">
+<div class="w-100 pt-5">
     <div class="row">
-    <b>_DIR_</b> - <?= __DIR__ ?> | <b>SYSTEMPATH</b> - <?= SYSTEMPATH ?> | <b>ENVIRONMENT</b> - <?= ENVIRONMENT ?> | <b>APPPATH</b> - <?= APPPATH ?> | <b>BASE_URL</b> - <?= base_url() ?> | <b>DB</b> - <?= $_ENV["database.default.database"] ?> | <b>DEBUG</b> - <?= CI_DEBUG ?>
-        <div class="col-sm-6 offset-sm-3">
-
+        <div class="col-sm-3 mx-auto">
             <div class="card">
                 <h2 class="card-header"><?=lang('Auth.register')?></h2>
                 <div class="card-body">

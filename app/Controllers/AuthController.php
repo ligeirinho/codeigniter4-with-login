@@ -56,7 +56,8 @@ class AuthController extends Controller
         // Set a return URL if none is specified
         $_SESSION['redirect_url'] = session('redirect_url') ?? previous_url() ?? '/';
 
-		return view($this->config->views['login'], ['session' => $this->session,
+		return view($this->config->views['login'], ['view' => 'login',
+													'session' => $this->session,
 													'auth' => $this->auth->check(),
 													'user' => $this->user,
 													'config' => $this->config]);
@@ -141,7 +142,11 @@ class AuthController extends Controller
 			return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
 		}
 
-		return view($this->config->views['register'], ['config' => $this->config]);
+		return view($this->config->views['register'], ['view' => 'register',
+													'session' => $this->session,
+													'auth' => $this->auth->check(),
+													'user' => $this->user,
+													'config' => $this->config]);
 	}
 
 	/**
@@ -219,7 +224,11 @@ class AuthController extends Controller
 			return redirect()->route('login')->with('error', lang('Auth.forgotDisabled'));
 		}
 
-		return view($this->config->views['forgot'], ['config' => $this->config]);
+		return view($this->config->views['forgot'], ['view' => 'forgot',
+														'session' => $this->session,
+														'auth' => $this->auth->check(),
+														'user' => $this->user,
+														'config' => $this->config]);
 	}
 
 	/**
@@ -269,9 +278,12 @@ class AuthController extends Controller
 
 		$token = $this->request->getGet('token');
 
-		return view($this->config->views['reset'], [
-			'config' => $this->config,
-			'token'  => $token,
+		return view($this->config->views['reset'], ['view' => 'reset',
+													'session' => $this->session,
+													'auth' => $this->auth->check(),
+													'user' => $this->user,
+													'config' => $this->config,
+													'token'  => $token
 		]);
 	}
 
