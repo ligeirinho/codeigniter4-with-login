@@ -127,6 +127,5 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
-/writable
 /node_modules
 /tests
