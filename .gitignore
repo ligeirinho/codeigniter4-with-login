@@ -129,3 +129,4 @@ nb-configuration.xml
 
 /node_modules
 /tests
+app/Config/
