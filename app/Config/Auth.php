@@ -225,8 +225,8 @@ class Auth extends \Myth\Auth\Config\Auth
     //
     public $userActivators = [
         'Myth\Auth\Authentication\Activators\EmailActivator' => [
-            'fromEmail' => 'thomas.moldovan@gmail.com',
-            'fromName' => 'dbdbdo.online',
+            'fromEmail' => '',
+            'fromName' => '',
         ],
     ];
 
@@ -237,8 +237,8 @@ class Auth extends \Myth\Auth\Config\Auth
     //
     public $userResetters = [
         'Myth\Auth\Authentication\Resetters\EmailResetter' => [
-            'fromEmail' => 'thomas.moldovan@gmail.com',
-            'fromName' => 'dbdbdo.online',
+            'fromEmail' => '',
+            'fromName' => '',
         ],
     ];
 
