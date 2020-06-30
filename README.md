@@ -12,7 +12,7 @@ Use [Composer] to install the packages:
 
 composer update
 
-Edit the .env file with your database credentials
+Rename env.sample file to .env, and edit your database credentials
 
 Run the migration:
 
